@@ -1,0 +1,15 @@
+name: qwen_dms
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - streamlit
+      - fastapi
+      - uvicorn[standard]
+      - openai
+      - PyPDF2
+      - sentence-transformers
+      - numpy
+      - requests
