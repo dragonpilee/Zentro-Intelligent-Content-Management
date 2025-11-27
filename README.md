@@ -104,13 +104,12 @@ http://127.0.0.1:8000
 
 ---
 
-## 🖼 Screenshots (stored in same dir)
+## 🖼 Screenshots 
 
 ![Screenshot 1](1.png)  
 ![Screenshot 2](2.png)  
 ![Screenshot 3](3.png)
 
-(Place `1.png`, `2.png`, `3.png` alongside this README file.)
 
 ---
 
