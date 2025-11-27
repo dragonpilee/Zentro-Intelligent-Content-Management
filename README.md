@@ -1,138 +1,94 @@
-# 🚀 Zentro – Intelligent Content Management
-### *Open-Source AI for Image, Document & Conversational Intelligence*
-### *Powered by Cyclops-VL 2.0 & Optimized for NVIDIA RTX GPUs*
+# ⚡ Zentro – Intelligent Content Management v1.0
 
-Zentro is an open-source intelligent content platform built for advanced image analysis, document understanding, and retrieval-augmented conversational intelligence (RAG).
-It operates fully offline on your machine and is optimized for NVIDIA RTX GPUs.
+![Zentro Banner](https://img.shields.io/badge/Zentro-v1.0-magenta?style=flat-square)
+![Engine](https://img.shields.io/badge/Engine-Cyclops--VL%202.0%20%2B%20CUDA-blue?style=flat-square)
+![Creator](https://img.shields.io/badge/Creator-ALAN%20CYRIL%20SUNNY-green?style=flat-square)
+![Python](https://img.shields.io/badge/Language-Python%203.10%2B-blue)
+![GPU](https://img.shields.io/badge/Optimized-RTX%202050--4090-orange?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-> ⚡ A commercial **cloud-managed version** also exists, where all computation, processing, indexing, storage, and orchestration run entirely in the cloud.
-
----
-
-## ⚡ GPU Optimization (Open-Source Version)
-
-- CUDA-accelerated inference
-- Mixed Precision (AMP)
-- TensorRT-friendly model architecture
-- GPU-accelerated embedding generation
-- Optimized for RTX 2050 → 4090 & A-series  
+> **Open-source | Offline-first | RTX-optimized**  
+> If this helps, please ⭐ [star the repository](https://github.com/dragonpilee/zentro)!
 
 ---
 
-## ✨ Key Features
+## 🧠 Zentro — Overview
 
-### 🖼️ Zentro Vision – Image Intelligence
-- Object, text, and layout detection
-- Diagram & UI screenshot analysis
-- Image summarization & reasoning
+Zentro is an offline, GPU-accelerated platform for image & document intelligence and retrieval-augmented conversational AI. Built for local RTX GPUs and powered by Cyclops-VL 2.0, it provides fast on-device vision-language reasoning, document understanding, and RAG workflows.
 
-### 📄 Zentro Docs – Document Intelligence
-- PDF/TXT parsing
-- Metadata extraction
-- Structured summaries, entities & topics
-
-### 💬 Zentro Chat – RAG-Powered Conversational AI
-Includes a complete offline Retrieval-Augmented Generation system:
-
-- Document ingestion
-- Automatic chunking
-- GPU-accelerated embeddings
-- Cosine similarity retrieval
-- Context-grounded answers using Cyclops-VL 2.0
+Key pillars:
+- Local-first, privacy-preserving
+- CUDA & mixed-precision inference
+- Optimized for NVIDIA RTX GPUs
 
 ---
 
-## 🧠 Zentro RAG Architecture
+## ✨ Core Features
 
-1. **Ingestion** → PDF/TXT loading
-2. **Chunking** → Optimized text segmentation
-3. **Embedding** → SentenceTransformers (GPU accelerated)
-4. **Retrieval** → Cosine-similarity search
-5. **Answering** → Cyclops-VL 2.0 generates grounded responses
+- Zentro Vision — object, text, layout detection, diagram analysis, image summarization  
+- Zentro Docs — PDF/TXT parsing, metadata extraction, structured summaries  
+- Zentro Chat — offline RAG with GPU embeddings, cosine retrieval, Cyclops-VL 2.0 grounding  
+- Fast GPU embeddings, TensorRT-friendly paths, AMP mixed precision
 
 ---
 
-## 🧩 Technology Stack
+## ⚡ GPU Optimization (Open-Source)
+
+- CUDA-accelerated inference and embeddings  
+- Mixed Precision (AMP) support  
+- TensorRT-friendly model flow  
+- Optimized for RTX 2050 → 4090 & A-series
+
+---
+
+## 🧩 Tech Stack
 
 | Component | Technology |
-|----------|------------|
+|---|---|
 | UI | Streamlit |
-| Backend | FastAPI |
-| Vision-Language Model | Cyclops-VL 2.0 |
-| GPU Acceleration | CUDA + RTX |
-| Embeddings | SentenceTransformers |
-| Retrieval | Custom cosine similarity |
-| Parsing | PyPDF + text utilities |
-| API Format | OpenAI-compatible |
-| Environment | Conda |
+| Backend | FastAPI (OpenAI-compatible endpoints) |
+| V-L Model | Cyclops-VL 2.0 |
+| Embeddings | SentenceTransformers (GPU) |
+| Retrieval | Cosine similarity (local) |
+| Parsing | PyPDF / text utilities |
+| Deployment | Conda / uvicorn / Streamlit |
 
 ---
 
-## 📦 Project Structure
+## 💻 Requirements
 
+- Python 3.10+  
+- NVIDIA GPU with CUDA (tested RTX series)  
+- Conda/Mamba recommended  
+- Optional: TensorRT for further speedups
+
+---
+
+## 📦 Quick Install (recommended)
+
+```powershell
+mamba create -n zentro -c conda-forge python=3.10 -y
+conda activate zentro
+pip install -r requirements.txt
+# Optional: install cupy/cuda toolkit per your CUDA version
 ```
-zentro/
-│── backend.py
-│── streamlit_app.py
-│── environment.yml
-│── README.md
-```
 
 ---
 
-# 🌐 Commercial Cloud Version (Optional)
+## 🚀 Run Locally (Offline)
 
-Alongside the offline open-source version, Zentro is also available as a **fully cloud-managed commercial offering**.
-
-In the cloud version:
-
-- All computation
-- All data processing
-- All document analysis
-- All retrieval, indexing, and similarity search
-- All orchestration and automation
-- All storage and management  
-
-…are handled entirely **in the cloud**, requiring no local hardware.
-
-Extra cloud capabilities include:
-
-- Multi-user workspace
-- Document ingestion pipelines
-- OCR + handwriting recognition
-- Knowledge graph generation
-- Centralized storage
-- Role-based access control
-- Audit logs and monitoring dashboards  
-
-> 📌 This README describes the offline open-source version.  
-> The cloud-managed version is a separate commercial product.
-
----
-
-## 🔒 Privacy (Open-Source Version)
-
-- Fully offline  
-- No telemetry
-- No external APIs  
-- All data stays on-device
-
----
-
-## 🚀 Running Zentro (Offline Version)
-
-### Start Backend
-```
+Start backend:
+```powershell
 uvicorn backend:app --reload --host 127.0.0.1 --port 8000
 ```
 
-Health check:
+Health:
 ```
 http://127.0.0.1:8000/health
 ```
 
-### Start Frontend
-```
+Start frontend:
+```powershell
 streamlit run streamlit_app.py
 ```
 
@@ -141,41 +97,64 @@ UI:
 http://localhost:8501
 ```
 
-Backend URL:
+Backend URL (default):
 ```
 http://127.0.0.1:8000
 ```
 
 ---
 
+## 🔐 Privacy & Modes
+
+- Offline open-source version: fully local, no telemetry, no external APIs.  
+- Commercial cloud-managed version (optional): managed cloud service with multi-tenant features, orchestration, centralized storage, RBAC and monitoring. The cloud product is separate from this repo.
+
+---
+
 ## 🛠 Troubleshooting
 
-### Backend not running
-```
-uvicorn backend:app --reload
-```
-
-### Chat not responding
-Document not indexed or backend offline.
-
-### GPU not detected
-```
+- Backend not reachable: ensure uvicorn process is running and port 8000 is free.  
+- GPU not detected:
+```python
 import torch
 torch.cuda.is_available()
 ```
+- Chat not returning answers: ensure documents are indexed and embeddings built.
+
+---
+
+## 📁 Project Structure
+
+```
+zentro/
+│── backend.py
+│── streamlit_app.py
+│── environment.yml
+│── requirements.txt
+│── README.md
+```
+
+---
+
+## 🚀 Future Work
+
+- Advanced OCR & handwriting recognition  
+- Knowledge graph extraction & analytics  
+- TensorRT end-to-end pipelines  
+- Multi-user sync (cloud product)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions welcome. Follow standard PR workflow and keep changes GPU-friendly and offline-first.
 
 ---
 
-## 📜 License  
-MIT License
+## 📜 License
+
+MIT License — free to use, modify, and share. Attribution appreciated.
 
 ---
 
-## ⭐ Support  
-If Zentro helps you, star ⭐ the repo!
+💚 Built for RTX GPUs — local-
