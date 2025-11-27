@@ -104,13 +104,13 @@ http://127.0.0.1:8000
 
 ---
 
-## 🖼 Screenshots
+## 🖼 Screenshots (stored in same dir)
 
-![Screenshot 1](screenshots/1.png)  
-![Screenshot 2](screenshots/2.png)  
-![Screenshot 3](screenshots/3.png)
+![Screenshot 1](1.png)  
+![Screenshot 2](2.png)  
+![Screenshot 3](3.png)
 
-(Place the three files at `zentro/screenshots/1.png`, `zentro/screenshots/2.png`, `zentro/screenshots/3.png` or adjust paths as needed.)
+(Place `1.png`, `2.png`, `3.png` alongside this README file.)
 
 ---
 
@@ -142,10 +142,9 @@ zentro/
 │── environment.yml
 │── requirements.txt
 │── README.md
-│── screenshots/
-│    ├── 1.png
-│    ├── 2.png
-│    └── 3.png
+│── 1.png
+│── 2.png
+│── 3.png
 ```
 
 ---
@@ -171,4 +170,4 @@ MIT License — free to use, modify, and share. Attribution appreciated.
 
 ---
 
-💚 Built for RTX GPUs — local-first, fast, and
+💚 Built for RTX GPUs — local-first,
