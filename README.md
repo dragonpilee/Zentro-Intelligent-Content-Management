@@ -14,7 +14,7 @@
 
 ## 🧠 Zentro — Overview
 
-Zentro is an offline, GPU-accelerated platform for image & document intelligence and retrieval-augmented conversational AI. Built for local RTX GPUs and powered by Cyclops-VL 2.0, it provides fast on-device vision-language reasoning, document understanding, and RAG workflows.
+Zentro is an offline, GPU-accelerated platform for image & document intelligence and retrieval-augmented conversational AI. Built for local RTX GPUs and powered by Cyclops-VL 2.0 — an in-house vision-language model — it provides fast on-device reasoning, document understanding, and RAG workflows.
 
 Key pillars:
 - Local-first, privacy-preserving
@@ -47,7 +47,7 @@ Key pillars:
 |---|---|
 | UI | Streamlit |
 | Backend | FastAPI (OpenAI-compatible endpoints) |
-| V-L Model | Cyclops-VL 2.0 |
+| V-L Model | Cyclops-VL 2.0 (in-house) |
 | Embeddings | SentenceTransformers (GPU) |
 | Retrieval | Cosine similarity (local) |
 | Parsing | PyPDF / text utilities |
@@ -157,4 +157,4 @@ MIT License — free to use, modify, and share. Attribution appreciated.
 
 ---
 
-💚 Built for RTX GPUs — local-
+💚 Built for RTX GPUs — local-first,
